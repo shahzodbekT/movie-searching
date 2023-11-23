@@ -16,6 +16,8 @@ async function loadMovies(searchTerm) {
 // Получение фильмов при вводе текста в поле поиска
 movieSearchBox.addEventListener('input', debounce(findMovies, 300));
 
+overlay.addEventListener('click', closeOverlay)
+
 function debounce(func, delay) {
   let timer;
   return function() {
