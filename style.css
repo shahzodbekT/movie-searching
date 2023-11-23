@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    transition: 0.25s;
+}
+
+body {
+    position: relative;
+    background-color: black;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 50px;
+}
+
+input {
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid lightgray;
+    font-size: 24px;
+    color: black;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.hide-search-list {
+  display: none;
+}
+
+.search-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: darkgray;
+  border-radius: 8px;
+  margin: 10px auto;
+}
+
+.search-item-thumbnail img {
+  width: 80px;
+}
+
+.search-item-info {
+  margin-left: 10px;
+}
+
+.movie-poster img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.movie-title {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.movie-misc-info {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.movie-misc-info li {
+  margin-bottom: 5px;
+}
+
+.genre,
+.writer,
+.actors,
+.plot,
+.language,
+.awards {
+  margin-top: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#result-grid {
+    background-color: #171717;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+#close-modal-btn {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+    margin: 20px auto;
+}
+
+#close-modal-btn:active {
+    background-color: #171717;
+    color: white;
+}
