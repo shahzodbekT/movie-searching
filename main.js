@@ -67,7 +67,7 @@ async function loadMovieDetails() {
     movie.addEventListener('click', async () => {
       overlay.classList.remove('hidden')
       movieSearchBox.value = "";
-      const result = await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=fc1fef96`);
+      const result = await fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=fc1fef96`);
       const movieDetails = await result.json();
       displayMovieDetails(movieDetails);
     });
