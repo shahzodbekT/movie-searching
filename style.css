@@ -1,121 +1,104 @@
-* {
-    margin: 0;
-    font-family: sans-serif;
-    color: white;
-    transition: 0.25s;
-}
-
 body {
-    position: relative;
-    background-color: black;
-}
-
-h1 {
-    font-size: 48px;
-    margin: 50px;
-}
-
-input {
-    outline: none;
-    border-radius: 8px;
-    border: 2px solid lightgray;
-    font-size: 24px;
-    color: black;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
 }
 
-.form-control {
-  width: 100%;
+#movie-search-box {
   padding: 10px;
-  margin-bottom: 20px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#search-list {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-item-thumbnail img {
+  max-width: 50px;
+  max-height: 75px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .hide-search-list {
   display: none;
 }
 
-.search-list-item {
+.result-grid {
   display: flex;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-  background-color: darkgray;
+  justify-content: space-around;
+  margin-top: 20px;
+  background-color: #fff;
   border-radius: 8px;
-  margin: 10px auto;
-}
-
-.search-item-thumbnail img {
-  width: 80px;
-}
-
-.search-item-info {
-  margin-left: 10px;
 }
 
 .movie-poster img {
-  width: 200px;
-  margin-bottom: 20px;
+  max-width: 200px;
+  max-height: 300px;
+  object-fit: cover;
 }
 
-.movie-title {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-.movie-misc-info {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-
-.movie-misc-info li {
-  margin-bottom: 5px;
-}
-
-.genre,
-.writer,
-.actors,
-.plot,
-.language,
-.awards {
-  margin-top: 10px;
+.movie-info {
+  max-width: 500px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 .overlay {
-    position: fixed;
-    top: 25px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#result-grid {
-    background-color: #171717;
-    padding: 24px;
-    border-radius: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-#close-modal-btn {
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 10px;
-    color: black;
-    margin: 20px auto;
+#close-overlay-btn {
+  padding: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-#close-modal-btn:active {
-    background-color: #171717;
-    color: white;
+#close-overlay-btn:hover {
+  background-color: #c82333;
 }

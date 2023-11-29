@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>Movie Search</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Info</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Movie Search:</h1>
-    <input id="movie-search-box" class="form-control" type="text" placeholder="Enter movie title...">
-    <div id="search-list" class="hide-search-list"></div>
-    <div class="overlay hidden">
-        <div id="result-grid"></div>
+    <div class="container">
+        <h1>Movie Info</h1>
+        <input type="text" id="movie-search-box" placeholder="Enter movie title">
+        <button onclick="findMovies()">Search</button>
+        <a href="favorites.html">Favorites</a>
+        <div id="search-list" class="hide-search-list"></div>
+        <div class="overlay hidden">
+          <div id="result-grid"></div>
+        </div>
     </div>
-  </div>
-  <script src="main.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>

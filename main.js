@@ -54,6 +54,7 @@ function displayMovieList(movies) {
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
       </div>
+      <button class="add-to-favorites-btn" onclick="addToFavorites('${movie.imdbID}', '${movie.Title}')">Add to Favorites</button>
     `;
     searchList.appendChild(movieListItem);
   });
@@ -94,10 +95,24 @@ function displayMovieDetails(details) {
       <p class="language"><b>Language:</b> ${details.Language}</p>
       <p class="awards"><b>Awards:</b> ${details.Awards}</p>
       <button id="close-modal-btn" onclick="closeOverlay()">Close</button>
+      <button class="add-to-favorites-btn" onclick="addToFavorites('${details.imdbID}', '${details.Title}')">Add to Favorites</button>
     </div>
   `;
 }
 
-function closeOverlay () {
+// Добавление фильма в избранное
+function addToFavorites(imdbID, title) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    
+    if (!favorites.some(movie => movie.imdbID === imdbID)) {
+        favorites.push({ imdbID, title });
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        alert(`${title} added to Favorites!`);
+    } else {
+        alert(`${title} is already in Favorites!`);
+    }
+}
+
+function closeOverlay() {
     overlay.classList.add('hidden')
 }
