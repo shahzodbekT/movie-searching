@@ -8,3 +8,10 @@
     justify-content: center;
     align-items: center;
 }
+button {
+    padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
